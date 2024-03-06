@@ -1,0 +1,332 @@
+Victor Guilherme Branco Portela
+Thiago de Freitas Alves Canedo
+Willians Eduardo delfino Motta
+
+Fonte: https://www.w3schools.com/java/default.asp
+
+1-a)    public class Main{
+
+        int numero = 5;
+
+    }
+    
+b)public static class Main{
+
+        int numero = 5;
+
+        public static void main(String[] args) {
+            Main object = new Main();
+            System.out.println(object.numero);
+        }
+    }
+
+c)    public static class Main{
+
+        String x;
+
+        public static void main(String[] args) {
+            Main object = new Main();
+            object.x = "abc";
+            System.out.println(object.x);
+        }
+    }
+    
+d)    public static class Main{
+
+     static void metodos(){
+        System.out.println("Hello World!");
+     }
+
+     public static void main(String[] args) {
+        metodos();
+     }
+       
+    }
+    
+e)    public abstract class Animal {
+        private String nome;
+        private int idade;
+    
+        public Animal(String nome, int idade) {
+            this.nome = nome;
+            this.idade = idade;
+        }
+    
+        public abstract void emitirSom();
+    
+        public void comer() {
+            System.out.println("Estou comendo...");
+        }
+    
+        public String getNome() {
+            return nome;
+        }
+    
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+    
+        public int getIdade() {
+            return idade;
+        }
+    
+        public void setIdade(int idade) {
+            this.idade = idade;
+        }
+    }
+    
+    public class Cachorro extends Animal {
+        public Cachorro(String nome, int idade) {
+            super(nome, idade);
+        }
+    
+        public void emitirSom() {
+            System.out.println("Au au!");
+        }
+    }
+    
+    public class Gato extends Animal {
+        public Gato(String nome, int idade) {
+            super(nome, idade);
+        }
+    
+        public void emitirSom() {
+            System.out.println("Miau!");
+        }
+    }
+
+f)    public  class Pessoa{
+
+        private String name;
+        //Getter
+        public String getName(){
+            return name;
+        }
+
+        //Setter
+        public void setName(String newName){
+            this.name = newName;
+        }
+       
+    }
+
+g)public class Pessoa {
+    private String nome;
+    private int idade;
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void imprimirDados() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+    }
+}
+
+public class Estudante extends Pessoa {
+    private String curso;
+
+    public Estudante(String nome, int idade, String curso) {
+        super(nome, idade);
+        this.curso = curso;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public void imprimirDados() {
+        super.imprimirDados();
+        System.out.println("Curso: " + curso);
+    }
+}
+
+e)class Animal {
+  public void animalSound() {
+    System.out.println("O animal faz um som");
+  }
+}
+
+class Porco extends Animal {
+  public void animalSound() {
+    System.out.println("O porco diz: oink oink");
+  }
+}
+
+class Cachorro extends Animal {
+  public void animalSound() {
+    System.out.println("O cachorro diz: au au");
+  }
+}
+
+
+2-)public class Aluno {
+    private int matricula;
+    private String nome;
+    private String curso;
+
+    public Aluno(int matricula, String nome, String curso) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.curso = curso;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+}
+
+public class TesteAluno {
+    public static void main(String[] args) {
+        Aluno aluno1 = new Aluno(1234, "João", "Engenharia");
+        System.out.println("Matrícula: " + aluno1.getMatricula());
+        System.out.println("Nome: " + aluno1.getNome());
+        System.out.println("Curso: " + aluno1.getCurso());
+    }
+}
+
+3-)public class Aluno {
+    private int matricula;
+    private String nome;
+    private String curso;
+    private Data dataNasc;
+
+    public Aluno(int matricula, String nome, String curso, Data dataNasc) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.curso = curso;
+        this.dataNasc = dataNasc;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public Data getDataNasc() {
+        return dataNasc;
+    }
+
+    public void setDataNasc(Data dataNasc) {
+        this.dataNasc = dataNasc;
+    }
+
+    public void imprimir() {
+        System.out.println("Matrícula: " + matricula);
+        System.out.println("Nome: " + nome);
+        System.out.println("Curso: " + curso);
+        System.out.println("Data de Nascimento: " + dataNasc.getDia() + "/" + dataNasc.getMes() + "/" + dataNasc.getAno());
+    }
+}
+
+public class Data {
+    private int dia;
+    private int mes;
+    private int ano;
+
+    public Data(int dia, int mes, int ano) {
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+    }
+
+    public int getDia() {
+        return dia;
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+}
+
+public class TesteAluno {
+    public static void main(String[] args) {
+        Data dataNasc1 = new Data(10, 05, 2000);
+        Aluno aluno1 = new Aluno(1234, "João", "Engenharia", dataNasc1);
+        aluno1.imprimir();
+    }
+}
+
+
+	   
+
+
+
+

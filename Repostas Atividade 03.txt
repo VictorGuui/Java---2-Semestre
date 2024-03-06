@@ -1,0 +1,172 @@
+//Victor Guilherme Branco Portela 2ºADS
+1) public static void main(String[]args){
+        int a[] = {0,1,2,3,4,5,6,7,8,9};
+        for (int i=0;i<10;i++){
+            System.out.println(a[i]);
+        }
+    }
+
+2)    public static void main(String[]args){
+        int a[] = {1,2,3,4,5,10,30,20,40,2};
+                
+        for (int i=0;i<a.length;i++){
+            if(a[i]>=20){
+                int b=a[i];
+                System.out.println(b);
+            }               
+            }        
+        }
+
+3)import java.util.Arrays;
+
+public class Main{
+
+    public static void main(String[]args){
+        int a[] = {1,2,3,4,5,10,30,20,40,2};
+        Arrays.sort(a,  0, a.length);
+        double soma = 0;
+        int maior = a[0];
+        int count=0;
+
+        for(int i =0;i < a.length;i++ ){
+            if(a[i]>maior){
+                maior = a[i];
+            }
+        }
+        
+                
+        for (int i=0;i<a.length;i++){
+            if(a[i]%2==0){       
+                soma +=a[i];
+                count++;                              
+            }                          
+            }  
+            double media = soma / count;
+            System.out.println("Media dos valores pares: "+media);     
+            System.out.println("O maior valor da lista: "+maior); 
+            System.out.println("O tamanho da lista: "+a.length);
+            System.out.println("Os valores pares da lista: "+count);
+        }
+    }
+
+4)import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		int quantidade;
+		
+		System.out.print("Digite a quantidade de números: ");
+		quantidade = entrada.nextInt();
+		
+		int[] Numeros = new int[quantidade];
+		
+		for(int x=0;x<quantidade;x++){
+			System.out.print("Digite o "+(x+1)+"° Número: ");
+			Numeros[x]= entrada.nextInt();
+		}
+		System.out.print("\nA ordem contrária é:\n");
+		for(int y=quantidade-1;y>=0;y--){
+			System.out.println(Numeros[y]);
+		}
+
+	}
+}
+
+5)public class Main {
+    public static void main(String[] args) {
+        int[] vetor = {1, 2, 3, 4, 5, 6, 7, 8};
+
+        // Imprime o vetor original
+        System.out.println("Vetor original: ");
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.print(vetor[i] + " ");
+        }
+        System.out.println();
+
+        // Realiza a troca dos valores
+        for (int i = 0; i < 4; i++) {
+            int temp = vetor[i];
+            vetor[i] = vetor[i + 4];
+            vetor[i + 4] = temp;
+        }
+
+        // Imprime o vetor após a troca
+        System.out.println("Vetor apos a troca: ");
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.print(vetor[i] + " ");
+        }
+    }
+}
+
+6)import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] vetor = {2, 5, 4, 54, 43, 22, 5, 9, 30, 15};
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite um valor para buscar no vetor: ");
+        int valorX = sc.nextInt();
+
+        boolean encontrado = false;
+        int posicao = -1;
+
+        // Realiza a busca do valor no vetor
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == valorX) {
+                encontrado = true;
+                posicao = i;
+                break;
+            }
+        }
+
+        // Imprime o resultado da busca
+        if (encontrado) {
+            System.out.println("O valor " + valorX + " foi encontrado na posição " + posicao);
+        } else {
+            System.out.println("O valor " + valorX + " não foi encontrado no vetor");
+        }
+    }
+}
+
+
+
+7)public class Main {
+    public static void main(String[] args) {
+        int[] A = {1, 2, 4, 6, 21};
+        int[] B = {2, 3, 6, 7, 9, 11, 15, 20};
+
+        System.out.println("Elementos comuns aos vetores A e B:");
+
+        // Realiza a busca dos elementos comuns
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < B.length; j++) {
+                if (A[i] == B[j]) {
+                    System.out.print(A[i] + " ");
+                    break;
+                }
+            }
+        }
+
+        System.out.println();
+    }
+}
+
+8)public class Main {
+    public static void main(String[] args) {
+        int[] M = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] N = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        int tamanho = M.length;
+        int produtoEscalar = 0;
+
+        // Realiza o cálculo do produto escalar
+        for (int i = 0; i < tamanho; i++) {
+            produtoEscalar += M[i] * N[i];
+        }
+
+        System.out.println("O produto escalar entre os vetores M e N e: " + produtoEscalar);
+    }
+}
+
